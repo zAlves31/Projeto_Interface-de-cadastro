@@ -45,7 +45,7 @@ namespace Projeto_Produtos
         }
 
 
-        public void Deletar()
+        public void Deletar(bool codigos)
         {
             this.NomeMarca = "";
             this.DataCadastro = DateTime.Parse("0000-00-00T00:00:00");

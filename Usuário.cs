@@ -19,17 +19,48 @@ namespace Projeto_Produtos
 
         public void Cadastrar()
         {
-            Console.WriteLine($"Insira seu nome :");
-            this.Nome = Console.ReadLine();
-            
-            Console.WriteLine($"Insira seu email : ");
-            this.Email = Console.ReadLine();
-            
-            Console.WriteLine($"Insira sua senha : ");
-            this.Senha = Console.ReadLine();
-            
-            this.DataCadastro = DateTime.Now;
 
+            Console.WriteLine($"INFORME O NOME DE USUARIO:");
+            this.Nome = Console.ReadLine();
+
+            Console.WriteLine($"INFORME O E-MAIL:");
+            this.Email = Console.ReadLine();
+
+            Console.WriteLine($"INFORME A SENHA:");
+            this.Senha = Console.ReadLine();
+
+            
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
+            Console.WriteLine($"Informacoes salvas!");
+            Console.ResetColor();
+            
+            
+
+        }
+
+          public void Logar(bool logado)
+        {
+            do
+            {
+            Console.WriteLine($"LOGIN:");
+            Console.WriteLine($"Informe o email cadastrado:");
+            string email = Console.ReadLine();
+            Console.WriteLine($"Informe a senha:");
+            string senha = Console.ReadLine();
+            if (email == Email && senha == Senha)
+            {
+               logado = true;
+               
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Email ou senha invalido");
+                Console.ResetColor();
+                
+            }
+            } while (logado != true);
         }
         
         public void Deletar()

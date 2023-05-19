@@ -54,7 +54,7 @@ namespace Projeto_Produtos
         }
 
 
-        public void Deletar()
+        public void Deletar(bool codigo )
         {
             this.NomeProduto = "";
             this.Preco = "";
